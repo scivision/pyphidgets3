@@ -1,9 +1,6 @@
 // - Stepper simple -
 // This simple example sets up a Stepper object, hooks the event handlers and opens it for device connections.  
-// Once an Advanced Servo is attached it will move the motor to various positions.
-//
-// Please note that this example was designed to work with only one Phidget Stepper connected. 
-//
+
 // Copyright 2008 Phidgets Inc.  All rights reserved.
 // This work is licensed under the Creative Commons Attribution 2.5 Canada License. 
 // view a copy of this license, visit http://creativecommons.org/licenses/by/2.5/ca/
@@ -11,7 +8,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <phidget21.h>
-//#include <unistd.h>
 
 int CCONV AttachHandler(CPhidgetHandle stepper, void *userptr)
 {
@@ -94,7 +90,6 @@ int stepper_simple(int pos, int serialnum)
 	CPhidget_open((CPhidgetHandle)stepper, serialnum);
 
 	//get the program to wait for an stepper device to be attached
-	printf("Waiting for Phidget to be attached....\n");
 	if((result = CPhidget_waitForAttachment((CPhidgetHandle)stepper, 10000)))
 	{
 		CPhidget_getErrorDescription(result, &err);
@@ -125,7 +120,7 @@ int stepper_simple(int pos, int serialnum)
 	CPhidgetStepper_setEngaged(stepper, 0, 1);
 
 	//Step 2: Position request
-	printf("Move to position %i. Press any key to Continue\n",pos);
+	printf("Move to position %i. Press any key to Continue  (Ctrl C to abort)\n",pos);
 	getchar();
 
 	CPhidgetStepper_setTargetPosition (stepper, 0, pos);
@@ -141,7 +136,7 @@ int stepper_simple(int pos, int serialnum)
 
 
 	//since user input has been read, this is a signal to terminate the program so we will close the phidget and delete the object we created
-	printf("\nClosing...\n");
+	printf("\nClosing Phidgets connection.\n");
 	CPhidget_close((CPhidgetHandle)stepper);
 	CPhidget_delete((CPhidgetHandle)stepper);
 
