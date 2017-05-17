@@ -1,6 +1,8 @@
 =========================================
-Phidgets servos for C and Python exmaples
+Phidgets servos for C and Python examples
 =========================================
+
+Using Phidgets servo controllers from C and Python on Linux including **Raspberry Pi**
 
 :author: Michael Hirsch, Ph.D.
 
