@@ -3,7 +3,7 @@
  * (c) Phidgets 2012
  */
 
-
+#include <stdlib.h>
 #include <stdio.h>
 #include <phidget21.h>
 
