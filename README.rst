@@ -6,6 +6,15 @@ Using Phidgets servo controllers from C and Python on Linux including **Raspberr
 
 :author: Michael Hirsch, Ph.D.
 
+.. contents::
+
+
+Python Phidgets
+===============
+
+The Python helper code comes directly from Phidgets, and attempts to do the opening and closing of drive connections without cluttering your codebase.
+Using it requires [Phidgets to be installed](https://www.scivision.co/phidgets-motor-control-install-linux-python/).
+
 Detect drive controller connected
 =================================
 This is a test to indicate your drivers are installed and connected to the controller::
