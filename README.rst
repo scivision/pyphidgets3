@@ -2,7 +2,8 @@
 Phidgets servos for C and Python examples
 =========================================
 
-Using Phidgets servo controllers from C and Python on Linux including **Raspberry Pi**
+Using Phidgets servo controllers from C and Python on Linux including **Raspberry Pi**.
+NOTE: This was written for Phidgets 21, and has not been tested with the major updates in Phidgets 22.
 
 :author: Michael Hirsch, Ph.D.
 
@@ -13,7 +14,7 @@ Python Phidgets
 ===============
 
 The Python helper code comes directly from Phidgets, and attempts to do the opening and closing of drive connections without cluttering your codebase.
-Using it requires [Phidgets to be installed](https://www.scivision.co/phidgets-motor-control-install-linux-python/).
+Using it requires `Phidgets to be installed <https://www.scivision.co/phidgets-motor-control-install-linux-python/>`_.
 
 Detect drive controller connected
 =================================
