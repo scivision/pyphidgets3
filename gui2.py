@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # https://stackoverflow.com/a/15306785
+# https://stackoverflow.com/a/37238753
 
 import tkinter as tk
 
