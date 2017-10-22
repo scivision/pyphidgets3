@@ -15,4 +15,5 @@ setup(name='pyphidgets',
       'License :: OSI Approved :: MIT License',
       'Programming Language :: Python',
       ],
+      install_requires=req,
 	  )
